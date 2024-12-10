@@ -1,0 +1,70 @@
+<mxfile>
+  <diagram name="Sistema de Facturación Electrónica">
+    <root>
+      <mxCell id="0" />
+      <mxCell id="1" parent="0" />
+
+      <!-- Bases de Datos -->
+      <mxCell id="db_ventas" value="Base de Datos de Ventas" style="shape=database;whiteSpace=wrap;html=1;fillColor=#D6EAF8;strokeColor=#2980B9;" vertex="1" parent="1">
+        <mxGeometry x="100" y="100" width="120" height="60" as="geometry" />
+      </mxCell>
+
+      <mxCell id="db_seguridad" value="Base de Datos de Seguridad" style="shape=database;whiteSpace=wrap;html=1;fillColor=#D6EAF8;strokeColor=#2980B9;" vertex="1" parent="1">
+        <mxGeometry x="300" y="100" width="120" height="60" as="geometry" />
+      </mxCell>
+
+      <!-- APIs -->
+      <mxCell id="api_ventas" value="API de Ventas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEBD0;strokeColor=#F39C12;" vertex="1" parent="1">
+        <mxGeometry x="100" y="200" width="120" height="60" as="geometry" />
+      </mxCell>
+
+      <mxCell id="api_seguridad" value="API de Seguridad" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEBD0;strokeColor=#F39C12;" vertex="1" parent="1">
+        <mxGeometry x="300" y="200" width="120" height="60" as="geometry" />
+      </mxCell>
+
+      <mxCell id="api_sunat" value="API de Facturación de SUNAT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEBD0;strokeColor=#F39C12;" vertex="1" parent="1">
+        <mxGeometry x="500" y="200" width="200" height="60" as="geometry" />
+      </mxCell>
+
+      <!-- Frontend -->
+      <mxCell id="web_ventas" value="Web de Ventas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5F5E3;strokeColor=#27AE60;" vertex="1" parent="1">
+        <mxGeometry x="100" y="300" width="120" height="60" as="geometry" />
+      </mxCell>
+
+      <mxCell id="movil_ventas" value="Aplicación Móvil" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5F5E3;strokeColor=#27AE60;" vertex="1" parent="1">
+        <mxGeometry x="300" y="300" width="120" height="60" as="geometry" />
+      </mxCell>
+
+      <!-- Almacenamiento -->
+      <mxCell id="almacenamiento" value="Almacenamiento de Archivos" style="shape=cloud;whiteSpace=wrap;html=1;fillColor=#E8DAEF;strokeColor=#8E44AD;" vertex="1" parent="1">
+        <mxGeometry x="500" y="100" width="200" height="60" as="geometry" />
+      </mxCell>
+
+      <!-- Conexiones -->
+      <mxCell id="con_db_ventas_api_ventas" edge="1" source="db_ventas" target="api_ventas" parent="1" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;rounded=1;strokeColor=#2980B9;">
+        <mxGeometry relative="1" as="geometry" />
+      </mxCell>
+
+      <mxCell id="con_db_seguridad_api_seguridad" edge="1" source="db_seguridad" target="api_seguridad" parent="1" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;rounded=1;strokeColor=#2980B9;">
+        <mxGeometry relative="1" as="geometry" />
+      </mxCell>
+
+      <mxCell id="con_api_ventas_web" edge="1" source="api_ventas" target="web_ventas" parent="1" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;rounded=1;strokeColor=#F39C12;">
+        <mxGeometry relative="1" as="geometry" />
+      </mxCell>
+
+      <mxCell id="con_api_ventas_movil" edge="1" source="api_ventas" target="movil_ventas" parent="1" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;rounded=1;strokeColor=#F39C12;">
+        <mxGeometry relative="1" as="geometry" />
+      </mxCell>
+
+      <mxCell id="con_api_ventas_sunat" edge="1" source="api_ventas" target="api_sunat" parent="1" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;rounded=1;strokeColor=#F39C12;">
+        <mxGeometry relative="1" as="geometry" />
+      </mxCell>
+
+      <mxCell id="con_api_ventas_almacenamiento" edge="1" source="api_ventas" target="almacenamiento" parent="1" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;rounded=1;strokeColor=#8E44AD;">
+        <mxGeometry relative="1" as="geometry" />
+      </mxCell>
+
+    </root>
+  </diagram>
+</mxfile>
